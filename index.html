@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Memory Game</title>
+		<link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css">
+    <script src="https://use.fontawesome.com/689284d57d.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/959b28ec16.css">
+	</head>
+	<body>
+		<div class="control-buttons">
+			<span>Start Game</span>
+			<input type="text" placeholder="Your name (+3 letters)" class="urName" />
+			<div class="mute">
+				<input type="checkbox" name="muteBox" id="mute-music" />
+				<label for="mute-music">Mute Music</label>
+			</div>
+		</div>
+		<div class="info-container">
+			<div class="name">Welcome <div><span></span></div></div>
+			<div class="attempts">
+				<div>Wrong Attempts: <span>0</span></div>
+				<span class="all-attempts"
+					>you have <span class="num"></span> attempts left</span
+				>
+			</div>
+		</div>
+		<div class="memory-game-blocks">
+			<div class="game-block" data-character="killua">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://i.pinimg.com/474x/90/b2/60/90b2605e7f02471f4b22ee2eab2ddac6.jpg"
+						alt="killua"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="killua">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://pbs.twimg.com/profile_images/672298756188999680/kSnrHJqF_400x400.jpg"
+						alt="killua"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="luffy">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://i.pinimg.com/474x/c4/77/f8/c477f8fe2fad8ad47aecb991a7cd6f7d.jpg"
+						alt="luffy"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="luffy">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuNcFf_-5jI36UP5spkzBF3LOrmmNPr9xpKw&usqp=CAU"
+						alt="luffy"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="gon">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLBS2jcIIA1lI-o0eUBCcZEWzKeZFXBztnUQ&usqp=CAU"
+						alt="gon"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="gon">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3bjsGURR-xV3EXl-XMSwncuYUAvIcwijWHw&usqp=CAU"
+						alt="gon"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="zoro">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://external-preview.redd.it/sJG3f-RDLndJxFar35jZA6yFrGhoL8kL6KzB_F4GSPE.jpg?auto=webp&s=91e70129617ef2c52da26e2e1514770167ea5d22"
+						alt="zoro"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="zoro">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://i.pinimg.com/originals/f5/c8/2d/f5c82da14a4a1651cfe742282cadf1d9.png"
+						alt="zoro"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="tanjiro">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://i.pinimg.com/474x/a3/21/d3/a321d35a39c601d3d7e5b3f7e147c6c4.jpg"
+						alt="tanjiro"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="tanjiro">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://i.pinimg.com/474x/03/2b/ba/032bba9b7345c95e8a28a485d97f92c7.jpg"
+						alt="tanjiro"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="L">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://c-cl.cdn.smule.com/rs-s80/arr/6d/6e/d9747d98-a474-4199-9dca-71a77c6f2729.jpg"
+						alt="L"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="L">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://i.pinimg.com/originals/d1/9c/05/d19c05442f885467b13435f0c99decfb.jpg"
+						alt="L"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="yagami">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://i.pinimg.com/474x/05/00/f8/0500f837a7846cb8f9632163ba4d88d2.jpg"
+						alt="yagami"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="yagami">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://at-cdn-s03.audiotool.com/2022/01/01/documents/54j1thps/0/cover256x256-496f038124e24c4da746e9684f6ddc2a.jpg"
+						alt="yagami"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="gintoki">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://qph.cf2.quoracdn.net/main-qimg-c3df06bef6597ba77c8f1c5adf89ea6f-pjlq"
+						alt="gintoki"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="gintoki">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTp4fNRbFKdfB_VdV5zPc_Na-AsmNLF274jQ&usqp=CAU"
+						alt="gintoki"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="mikasa">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://pbs.twimg.com/profile_images/612754829488844800/AQSMicmb_400x400.jpg"
+						alt="mikasa"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="mikasa">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://styles.redditmedia.com/t5_3acmqo/styles/profileIcon_p0772vq9edu51.jpg?width=256&height=256&crop=256:256,smart&s=c5c56e9db871658943a6685868e00d92d5df7029"
+						alt="mikasa"
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="kurisu">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://i.pinimg.com/474x/0f/87/69/0f87699a49eadda6635353b5414866ba.jpg"
+						alt=""
+					/>
+				</div>
+			</div>
+			<div class="game-block" data-character="kurisu">
+				<div class="face front"></div>
+				<div class="face back">
+					<img
+						src="https://external-preview.redd.it/V0txYzwHfGJnUHAA5p1YvqFD27ChH9I5_vyYUlwFbew.jpg?auto=webp&s=8859f8f3bb0cf0d20eb7727375ec95af163659f5"
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
+		<audio id="correct" src="./sounds/correct.wav" preload="auto"></audio>
+		<audio id="incorrect" src="./sounds/wrong.wav" preload="auto"></audio>
+		<audio id="lose" src="./sounds/lose.mp3" preload="auto"></audio>
+		<audio id="victory" src="./sounds/victory.wav" preload="auto"></audio>
+		<audio
+			id="back-music"
+			src="./sounds/background-music.wav"
+			preload="auto"
+			loop
+		></audio>
+		<script src="main.js"></script>
+	</body>
+</html>
